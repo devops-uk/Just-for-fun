@@ -1,0 +1,9 @@
+Q2: How would you design a Disaster Recovery (DR) plan for a mission-critical application?
+Scenario: A financial services company needed a DR plan for their transaction processing system.
+Solution:
+•	Implemented a pilot light strategy in AWS:
+o	Critical components (e.g., databases) were replicated to another region using AWS RDS Cross-Region Replication.
+o	Minimal infrastructure (e.g., EC2 instances) was pre-configured in the DR region but kept in a stopped state to reduce costs.
+•	Automated failover using AWS Lambda and CloudWatch to detect failures and trigger the DR process.
+•	Conducted regular DR drills to ensure the plan worked as expected.
+Outcome: The company could recover from a regional outage within 30 minutes, ensuring minimal disruption to operations.
